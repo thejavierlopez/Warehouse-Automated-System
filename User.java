@@ -13,7 +13,7 @@ public class User {
         this.role = role;
     }
 
-    //getter and setters
+    //getters and setters
     public String getId() {
         return id;
     }
@@ -26,21 +26,25 @@ public class User {
         return userName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getPassword() {
-
+        return password;
     }
 
-
-    //once i change something
-
-    public string banana() {
-        
+    public void setPassword(String password) {
+        this.password = password;
     }
 
+    public String getRole() {
+        return role;
+    }
 
-
-
-
+    public void setRole(String role) {
+        this.role = role;
+    }
 
 
 }
