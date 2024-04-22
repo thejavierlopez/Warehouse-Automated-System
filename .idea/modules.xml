@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Warehouse-Automated-System.iml" filepath="$PROJECT_DIR$/.idea/Warehouse-Automated-System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Warehouse-Automated-System.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Warehouse-Automated-System.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Warehouse-Automated-System.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Warehouse-Automated-System.test.iml" />
     </modules>
   </component>
 </project>
