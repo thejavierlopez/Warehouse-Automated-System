@@ -1,35 +1,29 @@
-// Apply the Java plugin to add support for Java
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id 'application'
+}
 
-// Apply the application plugin to make this project runnable
-apply plugin: 'application'
-
-
-// Define the group ID and version for your project
-group 'com.example.WASMain'
+group 'com.was'
 version '1.0-SNAPSHOT'
 
-sourceSets {
-    main {
-
-        }
-        resources {
-            ['/Users/lopez/Documents/GitHub/Warehouse-Automated-System']
-        }
-    }
-
-
-// Define the repository to fetch dependencies
 repositories {
-    mavenCentral() // Use Maven Central as the primary repository
+    mavenCentral()
 }
-
-// Define the main class
-mainClassName = 'WASMain'
 
 dependencies {
-    // MongoDB Java driver
     implementation 'org.mongodb:mongodb-driver-sync:5.0.1'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
     implementation 'org.mindrot:jbcrypt:0.4'
+
 }
+
+application {
+    mainClassName = 'com.was.WASMain'
+}
+
+
+
 

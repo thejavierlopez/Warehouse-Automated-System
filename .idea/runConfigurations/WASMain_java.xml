@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="WASMain.java" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="WASMain" />
-    <module name="Warehouse-Automated-System" />
+    <option name="MAIN_CLASS_NAME" value="com.was.WASMain" />
+    <module name="Warehouse-Automated-System.main" />
     <option name="PROGRAM_PARAMETERS" value="$Classpath$" />
     <method v="2">
       <option name="Make" enabled="true" />

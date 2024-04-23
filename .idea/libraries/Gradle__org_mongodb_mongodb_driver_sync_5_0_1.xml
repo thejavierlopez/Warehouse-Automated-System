@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-sync/5.0.1/3723fc6a032986dc4cb1c4929bafa85ce9f93950/mongodb-driver-sync-5.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-sync/5.0.1/6e114bee49e7506610fa3cc9559c041577d51510/mongodb-driver-sync-5.0.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

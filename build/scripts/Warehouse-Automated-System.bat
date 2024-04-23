@@ -68,11 +68,11 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\Warehouse-Automated-System-1.0-SNAPSHOT.jar;%APP_HOME%\lib\mongodb-driver-sync-5.0.1.jar;%APP_HOME%\lib\jbcrypt-0.4.jar;%APP_HOME%\lib\mongodb-driver-core-5.0.1.jar;%APP_HOME%\lib\bson-record-codec-5.0.1.jar;%APP_HOME%\lib\bson-5.0.1.jar
+set CLASSPATH=%APP_HOME%\lib\Warehouse-Automated-System-1.0-SNAPSHOT.jar;%APP_HOME%\lib\mongodb-driver-sync-5.0.1.jar;%APP_HOME%\lib\log4j-slf4j-impl-2.17.1.jar;%APP_HOME%\lib\slf4j-api-1.7.32.jar;%APP_HOME%\lib\log4j-core-2.17.1.jar;%APP_HOME%\lib\log4j-api-2.17.1.jar;%APP_HOME%\lib\jbcrypt-0.4.jar;%APP_HOME%\lib\mongodb-driver-core-5.0.1.jar;%APP_HOME%\lib\bson-record-codec-5.0.1.jar;%APP_HOME%\lib\bson-5.0.1.jar
 
 
 @rem Execute Warehouse-Automated-System
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %WAREHOUSE_AUTOMATED_SYSTEM_OPTS%  -classpath "%CLASSPATH%" WASMain %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %WAREHOUSE_AUTOMATED_SYSTEM_OPTS%  -classpath "%CLASSPATH%" com.was.WASMain %*
 
 :end
 @rem End local scope for the variables with windows NT shell
