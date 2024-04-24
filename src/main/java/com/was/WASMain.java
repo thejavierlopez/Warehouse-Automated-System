@@ -12,9 +12,10 @@ public class WASMain {
         ItemService itemService = new ItemService(itemDAO);
 
         // Create a new User and add it using UserService
-        User newUser = new User("javier", "superSecurePassword", "admin");
+        User newUser = new User("Omero", "superSecurePassword", "admin");
         userService.addUser(newUser);  // Add the user
         System.out.println("User added successfully.\n");
+        System.out.println(newUser);
 
         // Create a new Item and add it using ItemService
         Item newItem = new Item("box", 10); // Assuming Item constructor takes name and quantity, ID is generated
