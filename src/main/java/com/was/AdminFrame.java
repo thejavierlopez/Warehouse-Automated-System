@@ -30,16 +30,14 @@ public class AdminFrame extends JFrame{
 //Original Code:
 
     public AdminFrame() {
+
+        // setting up the properties of the Frame
         this.setTitle("Admin Control Flow Center");
         this.setSize(1050, 750);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(3);
-//        addUserButton.setPreferredSize(new Dimension(100, 80));
-//        deleteUserButton.setPreferredSize(new Dimension(100, 80));
-//        addItemButton.setPreferredSize(new Dimension(100, 80));
-//        deleteItemButton.setPreferredSize(new Dimension(100, 80));
-//        listAllItemsButton.setPreferredSize(new Dimension(100, 80));
-//        checkItemStockButton.setPreferredSize(new Dimension(100, 80));
+
+        // setting sizes of the Buttons
         addUserButton.setPreferredSize(new Dimension(100,80));
         deleteUserButton.setPreferredSize(new Dimension(100,80));
         DeleteItemButton.setPreferredSize(new Dimension(100,80));
@@ -48,8 +46,11 @@ public class AdminFrame extends JFrame{
         LogOutButton.setPreferredSize(new Dimension(50,40));
         AddItemButton.setPreferredSize(new Dimension(100,80));
 
+        // set contentpane to the Frame, and set the frame to be visible
         this.setContentPane(AdminPanel);
         this.setVisible(true);
+
+        // Action for LogOut button
         LogOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,25 +60,5 @@ public class AdminFrame extends JFrame{
             }
         });
     }
-
-
-    // Constructor for the AdminFrame class
-//    public AdminFrame() {
-//        // Frame setup
-//        this.setTitle("Admin Control Flow Center");
-//        this.setSize(1050, 750);
-//        this.setLocationRelativeTo(null); // Center the frame on the screen
-//        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Close operation
-//        addUserButton.setPreferredSize(new Dimension(150, 80)); // Set button size
-//        deleteUserButton.setPreferredSize(new Dimension(100, 80)); // Set button size
-//        addItemButton.setPreferredSize(new Dimension(100, 80)); // Set button size
-//        deleteItemButton.setPreferredSize(new Dimension(100, 80)); // Set button size
-//        listAllItemsButton.setPreferredSize(new Dimension(100, 80)); // Set button size
-//        checkItemStockButton.setPreferredSize(new Dimension(100, 80)); // Set button size
-//        this.setContentPane(AdminPanel); // Set the content pane
-//        this.setVisible(true); // Make the frame visible
-//    }
-
-
 }
 

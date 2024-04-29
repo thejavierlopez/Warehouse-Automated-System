@@ -50,19 +50,24 @@ public class MongoUserDAO implements UserDAO {
         return null;
     }
 
-    public String authenticateUser2(String username, String password) {
+    public String authenticateUser(String username, String password) {
+
+        //iterate through the Mongo Database and look for if the inputted user is within the database
         Document userDoc = users.find(Filters.eq("username", username)).first();
 
         if (userDoc != null) {
+            // If user is found, get the password from the user and compare it with the inputted password
             String storedPassword = userDoc.getString("password");
             if (password.equals(storedPassword)) {
                 // Authentication successful, retrieve user information from the database
+                // if passwords match, get the role of the user and return it as the function return value
                 String role = userDoc.getString("role");
                 return role;
             } else {
+                //else if user is found but passwords don't match, return this string as valude
                 return "IncorrectPassword";
             }
-        } //else :
+        } //else if there is No user with the inputted username, return this string:
         return "UserNotFound";
     }
 

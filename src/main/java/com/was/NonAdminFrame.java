@@ -21,15 +21,20 @@ public class NonAdminFrame extends JFrame {
 
     public NonAdminFrame() {
 
+        // set the properties of the Non-Admin Frame
         setTitle("NonAdmin Frame");
         setContentPane(NonAdminPanel);
         setSize(600, 700);
         setDefaultCloseOperation(3);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // set frame to center of screen
+
+        // set button sizes
         ListAllItemsButton.setPreferredSize(new Dimension(95, 70));
         CheckItemStockButton.setPreferredSize(new Dimension(95, 70));
         LogOutButton.setPreferredSize(new Dimension(95, 70));
         setVisible(true);
+
+        // Action for logout button (exit Admin Frame and sendback to Login Frame
         LogOutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
