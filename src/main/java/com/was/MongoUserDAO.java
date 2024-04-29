@@ -9,6 +9,8 @@ import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
 
+import javax.swing.*;
+
 public class MongoUserDAO implements UserDAO {
 
     MongoClient mongoClient = MongoClientUtil.getMongoClient();
@@ -46,6 +48,22 @@ public class MongoUserDAO implements UserDAO {
     public User getUser(String id) {
         // Implementation here...
         return null;
+    }
+
+    public String authenticateUser2(String username, String password) {
+        Document userDoc = users.find(Filters.eq("username", username)).first();
+
+        if (userDoc != null) {
+            String storedPassword = userDoc.getString("password");
+            if (password.equals(storedPassword)) {
+                // Authentication successful, retrieve user information from the database
+                String role = userDoc.getString("role");
+                return role;
+            } else {
+                return "IncorrectPassword";
+            }
+        } //else :
+        return "UserNotFound";
     }
 
     @Override
