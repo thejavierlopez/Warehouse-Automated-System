@@ -35,6 +35,9 @@ public class WASMain {
 //        AdminFrame ex = new AdminFrame();
 //        ex.setVisible(true);
 
+        addItemPanel ex = new addItemPanel ();
+        ex.setVisible(true);
+
 //        NonAdminFrame ex = new NonAdminFrame();
 //        ex.setVisible(true);
 
