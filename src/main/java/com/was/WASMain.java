@@ -3,7 +3,7 @@ public class WASMain {
 
     public static void main(String[] args) {
 
-        // Creating the DAO implementations
+        //Creating the DAO implementations
 //        UserDAO userDAO = new MongoUserDAO();
 //        ItemDAO itemDAO = new MongoItemDAO();
 //
@@ -37,10 +37,6 @@ public class WASMain {
 
 //        NonAdminFrame ex = new NonAdminFrame();
 //        ex.setVisible(true);
-
-//        ListAllItems ex = new ListAllItems();
-//        ex.setVisible(true);
-
 
 
     }

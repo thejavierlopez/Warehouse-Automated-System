@@ -5,7 +5,7 @@ public class User {
     private int userId;
     private String userName;
     private String password;
-    private String role;
+    private String role; // admin, user
 
     //constructor
     public User(String userName, String password, String role) {
