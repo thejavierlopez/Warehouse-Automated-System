@@ -64,12 +64,14 @@ public class MongoUserDAO implements UserDAO {
                 String role = userDoc.getString("role");
                 return role;
             } else {
-                //else if user is found but passwords don't match, return this string as valude
+                //else if user is found but passwords don't match, return this string as value
                 return "IncorrectPassword";
             }
         } //else if there is No user with the inputted username, return this string:
         return "UserNotFound";
     }
+
+
 
     @Override
     public void updateUser(User user) {

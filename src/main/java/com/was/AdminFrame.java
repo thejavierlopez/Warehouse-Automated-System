@@ -38,13 +38,21 @@ public class AdminFrame extends JFrame{
         this.setDefaultCloseOperation(3);
 
         // setting sizes of the Buttons
-        addUserButton.setPreferredSize(new Dimension(100,80));
-        deleteUserButton.setPreferredSize(new Dimension(100,80));
-        DeleteItemButton.setPreferredSize(new Dimension(100,80));
-        listAllItemsButton.setPreferredSize(new Dimension(100,80));
-        checkItemStockButton.setPreferredSize(new Dimension(100,80));
+//        addUserButton.setPreferredSize(new Dimension(100,80));
+//        deleteUserButton.setPreferredSize(new Dimension(100,80));
+//        DeleteItemButton.setPreferredSize(new Dimension(100,80));
+//        listAllItemsButton.setPreferredSize(new Dimension(100,80));
+//        checkItemStockButton.setPreferredSize(new Dimension(100,80));
+//        LogOutButton.setPreferredSize(new Dimension(50,40));
+//        AddItemButton.setPreferredSize(new Dimension(100,80));
+
+        addUserButton.setPreferredSize(new Dimension(50,40));
+        deleteUserButton.setPreferredSize(new Dimension(50,40));
+        DeleteItemButton.setPreferredSize(new Dimension(50,40));
+        listAllItemsButton.setPreferredSize(new Dimension(50,40));
+        checkItemStockButton.setPreferredSize(new Dimension(50,40));
         LogOutButton.setPreferredSize(new Dimension(50,40));
-        AddItemButton.setPreferredSize(new Dimension(100,80));
+        AddItemButton.setPreferredSize(new Dimension(50,40));
 
         // set contentpane to the Frame, and set the frame to be visible
         this.setContentPane(AdminPanel);
@@ -58,7 +66,22 @@ public class AdminFrame extends JFrame{
                 LoginFrame newLogin = new LoginFrame();
                 newLogin.setVisible(true);
             }
+
+
+
         });
+
+        // Action for List All Items Button
+        listAllItemsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                AdminListAllItemsFrame newFrame = new AdminListAllItemsFrame();
+                newFrame.setVisible(true);
+            }
+        });
+
     }
 }
 

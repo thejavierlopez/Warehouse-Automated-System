@@ -1,5 +1,10 @@
 package com.was;
 
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import org.bson.Document;
+
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -24,7 +29,9 @@ public class MongoItemDAO implements ItemDAO {
         items.insertOne(newItem);
     }
 
-
+    public FindIterable<Document> getAllItems() {
+        return items.find();
+    }
 
     @Override
     public void deleteItem(Item item) {
@@ -36,4 +43,5 @@ public class MongoItemDAO implements ItemDAO {
 
     }
     //continue adding additional methods here
+
 }

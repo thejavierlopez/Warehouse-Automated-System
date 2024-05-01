@@ -180,7 +180,7 @@
                 <properties>
                   <background color="-3421494"/>
                   <font size="20" style="1"/>
-                  <text value="Delete Item"/>
+                  <text value="Remove quantity"/>
                   <verticalAlignment value="0"/>
                 </properties>
               </component>
