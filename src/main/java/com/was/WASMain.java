@@ -35,6 +35,16 @@ public class WASMain {
 //        addItemPanel ex = new addItemPanel ();
 //        ex.setVisible(true);
 
+//        adduser ex = new adduser();
+//        ex.setVisible(true);
+
+//        deleteItem ex = new deleteItem();
+//        ex.setVisible(true);
+
+//        deleteUser ex = new deleteUser();
+//        ex.setVisible(true);
+        
+
 //        NonAdminFrame ex = new NonAdminFrame();
 //        ex.setVisible(true);
 

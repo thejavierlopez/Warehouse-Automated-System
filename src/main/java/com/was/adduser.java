@@ -16,10 +16,26 @@ public class adduser extends JFrame{
     private JButton exitButton;
 
     public adduser() {
+
+        this.setTitle("Add user Frame");
+        this.setSize(400,350);
+        this.setDefaultCloseOperation(3);
+        this.setLocationRelativeTo(null);
+        this.setContentPane(addUmain);
+        this.setVisible(true);
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                AdminFrame ex = new AdminFrame();
+                ex.setVisible(true);
             }
         });
     }
