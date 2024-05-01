@@ -11,10 +11,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
-
-
-public class AdminListAllItemsFrame extends JFrame {
+public class NONAdminListAllItemsFrame extends JFrame {
     private JPanel MainPanel;
     private JPanel CenterPanel;
     private JPanel ButtonPanel;
@@ -27,7 +24,7 @@ public class AdminListAllItemsFrame extends JFrame {
     private JPanel ItemQuantityPanel;
     private JPanel InsideScroll;
 
-    public AdminListAllItemsFrame() {
+    public NONAdminListAllItemsFrame() {
 
         // setting up the properties of the Frame
         this.setTitle("All Items in Database");
@@ -35,8 +32,6 @@ public class AdminListAllItemsFrame extends JFrame {
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(3);
         this.setContentPane(MainPanel);
-
-        // I want to be able to display the items in my ScrollPane when this JFrame is called
 
         MongoItemDAO itemDAO = new MongoItemDAO();
         FindIterable<Document> allItems = itemDAO.getAllItems();
@@ -67,8 +62,8 @@ public class AdminListAllItemsFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                AdminFrame newAdminFrame = new AdminFrame();
-                newAdminFrame.setVisible(true);
+                NonAdminFrame newNonAdminFrame = new NonAdminFrame();
+                newNonAdminFrame.setVisible(true);
             }
         });
 

@@ -29,8 +29,8 @@ public class WASMain {
 //        LoginFrame ex = new LoginFrame();
 //        ex.setVisible(true);
 
-//        AdminFrame ex = new AdminFrame();
-//        ex.setVisible(true);
+        AdminFrame ex = new AdminFrame();
+        ex.setVisible(true);
 
 //        addItemPanel ex = new addItemPanel ();
 //        ex.setVisible(true);

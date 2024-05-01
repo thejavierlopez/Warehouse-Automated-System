@@ -54,6 +54,8 @@ public class AdminFrame extends JFrame{
         LogOutButton.setPreferredSize(new Dimension(50,40));
         AddItemButton.setPreferredSize(new Dimension(50,40));
 
+
+
         // set contentpane to the Frame, and set the frame to be visible
         this.setContentPane(AdminPanel);
         this.setVisible(true);
@@ -82,6 +84,16 @@ public class AdminFrame extends JFrame{
             }
         });
 
+
+        checkItemStockButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                AdminCheckItemStockFrame newAdminCheckItemStockFrame = new AdminCheckItemStockFrame();
+                newAdminCheckItemStockFrame.setVisible(true);
+            }
+        });
     }
 }
 

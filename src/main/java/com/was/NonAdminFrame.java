@@ -43,6 +43,15 @@ public class NonAdminFrame extends JFrame {
                 newLogin.setVisible(true);
             }
         });
+
+        ListAllItemsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                NONAdminListAllItemsFrame newNonAdminListAllItemsFrame = new NONAdminListAllItemsFrame();
+                newNonAdminListAllItemsFrame.setVisible(true);
+            }
+        });
     }
 
 }
