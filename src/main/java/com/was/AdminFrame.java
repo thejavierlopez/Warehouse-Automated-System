@@ -94,6 +94,27 @@ public class AdminFrame extends JFrame{
                 newAdminCheckItemStockFrame.setVisible(true);
             }
         });
+
+
+        AddItemButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                addItemPanel newaddItemPanel = new addItemPanel();
+                newaddItemPanel.setVisible(true);
+
+            }
+        });
+        DeleteItemButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                deleteItem newDeletion = new deleteItem();
+                newDeletion.setVisible(true);
+
+            }
+        });
     }
 }
 

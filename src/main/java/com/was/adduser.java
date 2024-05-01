@@ -26,8 +26,25 @@ public class adduser extends JFrame{
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                /*
+                 grab the user input into strings
+                 if the admin part is yes:
+
+                 if(yes) {
+                    create a mongouserDao object
+                    create a user object, passing in the username, password, and admin role
+                    use addUser function to add to database
+                 }
+
+                 else if (not admin) {
+                    create a mongouserdao
+                    craete a user object, passing in the username, password, and user role
+                    use adduser function to add to database.
+                 }
 
 
+
+                 */
             }
         });
         exitButton.addActionListener(new ActionListener() {
