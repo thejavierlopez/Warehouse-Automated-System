@@ -29,6 +29,12 @@ public class addItemPanel extends JFrame{
 
             }
         });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 //    public static void main(String[] args) {
