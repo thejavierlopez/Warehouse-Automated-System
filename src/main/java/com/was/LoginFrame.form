@@ -19,7 +19,7 @@
         </constraints>
         <properties>
           <font name="Avenir Next" size="62" style="0"/>
-          <text value="Login"/>
+          <text value="   Login"/>
           <verticalAlignment value="0"/>
         </properties>
       </component>

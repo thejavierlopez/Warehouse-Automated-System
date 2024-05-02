@@ -69,6 +69,7 @@ public class AdminListAllItemsFrame extends JFrame {
                 dispose();
                 AdminFrame newAdminFrame = new AdminFrame();
                 newAdminFrame.setVisible(true);
+
             }
         });
 
