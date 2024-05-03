@@ -40,7 +40,7 @@
           <text value="User Name:"/>
         </properties>
       </component>
-      <component id="34bc9" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="34bc9" class="javax.swing.JTextField" binding="usernameTextField">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -58,7 +58,7 @@
           <text value="Password:"/>
         </properties>
       </component>
-      <component id="bf43a" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="bf43a" class="javax.swing.JTextField" binding="passwordField">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -73,16 +73,8 @@
         <properties>
           <font size="18" style="1"/>
           <foreground color="-16777216"/>
-          <text value="Admin (Yes/No):"/>
+          <text value="Admin:"/>
         </properties>
-      </component>
-      <component id="8e29c" class="javax.swing.JTextField" binding="textField3" default-binding="true">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
       </component>
       <component id="e6c35" class="javax.swing.JButton" binding="addUserButton" default-binding="true">
         <constraints>
@@ -102,6 +94,14 @@
           <background color="-1"/>
           <foreground color="-16777216"/>
           <text value="Go Back"/>
+        </properties>
+      </component>
+      <component id="c72f6" class="javax.swing.JCheckBox" binding="isAdminCheckBox">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="(Select for Yes)"/>
         </properties>
       </component>
     </children>

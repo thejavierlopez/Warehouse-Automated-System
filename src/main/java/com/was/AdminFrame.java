@@ -110,9 +110,28 @@ public class AdminFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                dispose();
                 deleteItem newDeletion = new deleteItem();
                 newDeletion.setVisible(true);
 
+            }
+        });
+        addUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                adduser ex = new adduser();
+                ex.setVisible(true);
+            }
+        });
+        deleteUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                deleteUser ex = new deleteUser();
+                ex.setVisible(true);
             }
         });
     }

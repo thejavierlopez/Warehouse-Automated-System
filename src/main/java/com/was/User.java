@@ -12,6 +12,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.role = role;
+
     }
 
    //not yet functional - attempted to encrypt plaint passwords using hashing.

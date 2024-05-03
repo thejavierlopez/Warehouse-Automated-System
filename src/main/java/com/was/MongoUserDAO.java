@@ -8,6 +8,7 @@ import com.mongodb.client.model.FindOneAndUpdateOptions;
 import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import javax.swing.*;
 
@@ -46,7 +47,29 @@ public class MongoUserDAO implements UserDAO {
 
     @Override
     public User getUser(String id) {
-        // Implementation here...
+// Create a filter to find the user by their ID
+        /*
+        Bson filter = Filters.eq("user_id", Integer.parseInt(id));
+
+        // Find the user in the database
+        Document userDocument = users.find(filter).first();
+
+        // Check if the user exists
+        if (userDocument != null) {
+            // Retrieve user details from the document
+            int userId = userDocument.getInteger("user_id");
+            String username = userDocument.getString("username");
+            String password = userDocument.getString("password");
+            String role = userDocument.getString("role");
+
+            // Create and return a User object
+            return new User(userId, username, password, role);
+        } else {
+            // User not found in the database
+            System.out.println("Error: User not found.");
+            return null;
+        } */
+
         return null;
     }
 
@@ -80,8 +103,23 @@ public class MongoUserDAO implements UserDAO {
 
     @Override
     public void deleteUser(String id) {
-        // Implementation here...
+/*
+        // Create a filter to find the user by their username
+        Bson filter = Filters.eq("username", username);
+
+        // Find the user in the database
+        Document userDocument = users.find(filter).first();
+
+        // Check if the user exists
+        if (userDocument != null) {
+            // Delete the user from the database
+            users.deleteOne(filter);
+        } else {
+            // User not found in the database, show error message
+            JOptionPane.showMessageDialog(null, "Error: User was not found.", "User Not Found", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
+*/
 
-}
+}}

@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 public class adduser extends JFrame{
     private JPanel addUmain;
     private JLabel title;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField usernameTextField;
+    private JTextField passwordField;
+    private JCheckBox isAdminCheckBox;
     private JLabel UserNameT;
     private JLabel RoleT;
     private JLabel PasswordT;
@@ -26,6 +26,34 @@ public class adduser extends JFrame{
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                // Get user input from text fields or other components
+                String username = usernameTextField.getText(); //Extract info. from JTextField named usernameTextField
+                String password = passwordField.getText(); //Extract info. from JPasswordField named passwordField
+                boolean isAdmin = isAdminCheckBox.isSelected(); //Extract info. from JCheckBox named isAdminCheckBox
+
+                // Check if the user is an admin
+                if (isAdmin) {
+                    // If yes, create a MongoUserDAO object
+                    MongoUserDAO userDAO = new MongoUserDAO();
+
+                    // Create a user object with admin role
+                    User user = new User(username, password, "admin");
+
+                    // Add the user to the database using addUser function
+                    userDAO.addUser(user);
+                } else {
+                    // If not admin, create a MongoUserDAO object
+                    MongoUserDAO userDAO = new MongoUserDAO();
+
+                    // Create a user object with user role
+                    User user = new User(username, password, "user");
+
+                    // Add the user to the database using addUser function
+                    userDAO.addUser(user);
+                }
+
+
                 /*
                  grab the user input into strings
                  if the admin part is yes:
