@@ -42,6 +42,8 @@ public class adduser extends JFrame{
 
                     // Add the user to the database using addUser function
                     userDAO.addUser(user);
+                    JOptionPane.showMessageDialog(null, "Success: User added to database", "Success Prompt", JOptionPane.INFORMATION_MESSAGE);
+
                 } else {
                     // If not admin, create a MongoUserDAO object
                     MongoUserDAO userDAO = new MongoUserDAO();
@@ -51,6 +53,8 @@ public class adduser extends JFrame{
 
                     // Add the user to the database using addUser function
                     userDAO.addUser(user);
+                    JOptionPane.showMessageDialog(null, "Success: User added to database", "Success Prompt", JOptionPane.INFORMATION_MESSAGE);
+
                 }
 
 
