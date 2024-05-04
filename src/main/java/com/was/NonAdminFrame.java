@@ -52,6 +52,17 @@ public class NonAdminFrame extends JFrame {
                 newNonAdminListAllItemsFrame.setVisible(true);
             }
         });
+
+
+        CheckItemStockButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                dispose();
+                NonAdminCheckItemStockFrame newNonAdminCheckItemStockFrame = new NonAdminCheckItemStockFrame();
+                newNonAdminCheckItemStockFrame.setVisible(true);
+            }
+        });
     }
 
 }

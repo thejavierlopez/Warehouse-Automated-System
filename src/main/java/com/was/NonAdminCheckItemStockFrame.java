@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import com.mongodb.client.FindIterable;
 import org.bson.Document;
 
-public class AdminCheckItemStockFrame extends JFrame {
+public class NonAdminCheckItemStockFrame extends JFrame {
     private JPanel MainPanel;
     private JPanel CenterPanel;
     private JPanel TopPanel;
@@ -41,7 +41,7 @@ public class AdminCheckItemStockFrame extends JFrame {
     private JLabel DisplayInfoLabel;
 
     private MongoItemDAO mongoItemDAO; // Instance of MongoItemDAO
-    public AdminCheckItemStockFrame() {
+    public NonAdminCheckItemStockFrame() {
         // setting up the properties of the Frame
         this.setTitle("Search Item Stock");
         this.setSize(850,225);
@@ -63,8 +63,8 @@ public class AdminCheckItemStockFrame extends JFrame {
 
                 //Go back to admin Frame
                 dispose();
-                AdminFrame newAdminFrame = new AdminFrame();
-                newAdminFrame.setVisible(true);
+                NonAdminFrame newNonAdminFrame = new NonAdminFrame();
+                newNonAdminFrame.setVisible(true);
             }
         });
 
@@ -98,7 +98,7 @@ public class AdminCheckItemStockFrame extends JFrame {
                 }
 
                 if (!found) { // If the item was not found after looping through all items
-                    JOptionPane.showMessageDialog(AdminCheckItemStockFrame.this, "Item Not found!", "Search Result", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(NonAdminCheckItemStockFrame.this, "Item Not found!", "Search Result", JOptionPane.ERROR_MESSAGE);
                 }
 
                 revalidate();
