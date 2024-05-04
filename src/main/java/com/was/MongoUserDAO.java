@@ -13,7 +13,7 @@ public class MongoUserDAO implements UserDAO {
 
     MongoClient mongoClient = MongoClientUtil.getMongoClient();
     MongoDatabase database = mongoClient.getDatabase("WAS");
-    static MongoCollection<Document> users = database.getCollection("users");
+     MongoCollection<Document> users = database.getCollection("users");
 
     @Override
     public void addUser(User user) {
