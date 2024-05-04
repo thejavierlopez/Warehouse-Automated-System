@@ -13,6 +13,9 @@ public class deleteUser extends JFrame {
     private JLabel uName;
     private JButton goBackButton;
 
+    // Create an instance of MongoUserDAO to access its methods
+    private MongoUserDAO userDAO = new MongoUserDAO();
+
     public deleteUser() {
 
         this.setTitle("Add user Frame");
@@ -30,7 +33,7 @@ public class deleteUser extends JFrame {
                 String username = textField2.getText();
 
                 // Call the deleteUser method with the username
-                boolean deletionSuccessful =  deleteUser(username);
+                boolean deletionSuccessful =  userDAO.deleteUser(username);
 
                 // Show message based on deletion success or failure
                 if (deletionSuccessful) {
