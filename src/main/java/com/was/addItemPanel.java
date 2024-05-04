@@ -30,7 +30,9 @@ public class addItemPanel extends JFrame{
             String QuantityString = textField1.getText();
             //convert string quantity to Int
 
-
+            if (ItemName.equals("")) {
+                JOptionPane.showMessageDialog(null, "Error: No input for Item Name!", "Input Error", JOptionPane.ERROR_MESSAGE);
+            } else {
                 try {
                     int QuantityInt = Integer.parseInt(QuantityString);
 
@@ -43,6 +45,8 @@ public class addItemPanel extends JFrame{
                     JOptionPane.showMessageDialog(null, "Error: Input is not a valid integer.", "Input Error", JOptionPane.ERROR_MESSAGE);
                     // Handle the error or notify the user accordingly
                 }
+            }
+
 
             }
         });
@@ -56,14 +60,4 @@ public class addItemPanel extends JFrame{
             }
         });
     }
-
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("addItemPanel");
-//        frame.setContentPane(new addItemPanel().MainItemPan);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.pack();
-//        frame.setVisible(true);
-//
-//
-//    }
 }
