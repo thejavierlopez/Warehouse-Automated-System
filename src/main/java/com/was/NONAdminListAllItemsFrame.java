@@ -33,6 +33,7 @@ public class NONAdminListAllItemsFrame extends JFrame {
         this.setDefaultCloseOperation(3);
         this.setContentPane(MainPanel);
 
+        //initializing Mongo Item object
         MongoItemDAO itemDAO = new MongoItemDAO();
         FindIterable<Document> allItems = itemDAO.getAllItems();
 
@@ -56,11 +57,12 @@ public class NONAdminListAllItemsFrame extends JFrame {
             InsideScroll.add(itemLabel);
         }
 
-        ScrollPane.setViewportView(InsideScroll);
+        ScrollPane.setViewportView(InsideScroll); // Set the panel visible inside the ScrollPane
 
         GoBackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Go back to A non Admin Frame
                 dispose();
                 NonAdminFrame newNonAdminFrame = new NonAdminFrame();
                 newNonAdminFrame.setVisible(true);

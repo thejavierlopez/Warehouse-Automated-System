@@ -37,15 +37,7 @@ public class AdminFrame extends JFrame{
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(3);
 
-        // setting sizes of the Buttons
-//        addUserButton.setPreferredSize(new Dimension(100,80));
-//        deleteUserButton.setPreferredSize(new Dimension(100,80));
-//        DeleteItemButton.setPreferredSize(new Dimension(100,80));
-//        listAllItemsButton.setPreferredSize(new Dimension(100,80));
-//        checkItemStockButton.setPreferredSize(new Dimension(100,80));
-//        LogOutButton.setPreferredSize(new Dimension(50,40));
-//        AddItemButton.setPreferredSize(new Dimension(100,80));
-
+        //set sizes for the buttons
         addUserButton.setPreferredSize(new Dimension(50,40));
         deleteUserButton.setPreferredSize(new Dimension(50,40));
         DeleteItemButton.setPreferredSize(new Dimension(50,40));
