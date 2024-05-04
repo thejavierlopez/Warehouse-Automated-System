@@ -20,5 +20,7 @@ public class ItemService {
         itemDAO.updateItem(item);
     }
 
+    public void deleteAllItems() {itemDAO.deleteAllItems();}
+
     //continue adding service methods
 }

@@ -54,6 +54,13 @@ public class MongoItemDAO implements ItemDAO {
     }
 
     @Override
+    public void deleteAllItems() {
+        MongoCollection<Document> collection = database.getCollection("items");
+        //deletes all items in the collection items
+        collection.deleteMany(new Document());
+    }
+
+    @Override
     public void updateItem(Item item) {
 
     }

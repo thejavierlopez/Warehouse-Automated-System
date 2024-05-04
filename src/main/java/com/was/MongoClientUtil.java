@@ -11,8 +11,10 @@ public class MongoClientUtil {
     private static MongoClient mongoClient = null;
 
     public static MongoClient getMongoClient() {
-        if (mongoClient == null) {  // Lazy initialization
+        if (mongoClient == null) {
             String connectionString = "mongodb+srv://lopez6295:MDBJuiceZeehc1995$$@was.ilxoprd.mongodb.net/?retryWrites=true&w=majority&appName=WAS";
+
+            //String connectionString = "mongodb+srv://<credentials>@was.ilxoprd.mongodb.net/";
             ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();
             MongoClientSettings settings = MongoClientSettings.builder()
                     .applyConnectionString(new ConnectionString(connectionString))
