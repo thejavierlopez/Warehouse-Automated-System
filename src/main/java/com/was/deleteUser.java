@@ -1,4 +1,7 @@
 package com.was;
+import com.mongodb.client.model.Filters;
+import org.bson.Document;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,7 +9,6 @@ import java.awt.event.ActionListener;
 public class deleteUser extends JFrame {
     private JPanel delUMain;
     private JButton deleteButton;
-    private JTextField textField1;
     private JTextField textField2;
     private JLabel uName;
     private JButton goBackButton;
@@ -22,8 +24,24 @@ public class deleteUser extends JFrame {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Action to perform when delete button is clicked
 
+                // Retrieve the username from the text field
+                String username = textField2.getText();
+
+                // Call the deleteUser method with the username
+                boolean deletionSuccessful =  deleteUser(username);
+
+                // Show message based on deletion success or failure
+                if (deletionSuccessful) {
+                    JOptionPane.showMessageDialog(null, "User deleted successfully!");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error: User not found!");
+                }
             }
+
+
+
         });
         goBackButton.addActionListener(new ActionListener() {
             @Override

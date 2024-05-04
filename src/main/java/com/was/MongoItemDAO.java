@@ -38,7 +38,18 @@ public class MongoItemDAO implements ItemDAO {
 
     public void deleteItem(Item itemId) {
 
+        // Find the item in the database based on the provided item ID
+        Document itemDocument = items.find(Filters.eq("item_id", itemId)).first();
 
+        // Check if the item exists
+        if (itemDocument != null) {
+            // Delete the item from the database
+            items.deleteOne(itemDocument);
+            //JOptionPane.showMessageDialog(null, "Success: Item deleted from database", "Success Prompt", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            // If item is not found, show error message
+            //JOptionPane.showMessageDialog(null, "Error: Item not found.", "Item Not Found", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 

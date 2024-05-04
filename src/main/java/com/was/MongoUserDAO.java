@@ -8,15 +8,12 @@ import com.mongodb.client.model.FindOneAndUpdateOptions;
 import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
-import org.bson.conversions.Bson;
-
-import javax.swing.*;
 
 public class MongoUserDAO implements UserDAO {
 
     MongoClient mongoClient = MongoClientUtil.getMongoClient();
     MongoDatabase database = mongoClient.getDatabase("WAS");
-    MongoCollection<Document> users = database.getCollection("users");
+    static MongoCollection<Document> users = database.getCollection("users");
 
     @Override
     public void addUser(User user) {
@@ -102,24 +99,18 @@ public class MongoUserDAO implements UserDAO {
     }
 
     @Override
-    public void deleteUser(String id) {
-/*
-        // Create a filter to find the user by their username
-        Bson filter = Filters.eq("username", username);
+    public boolean deleteUser(String username) {
 
-        // Find the user in the database
-        Document userDocument = users.find(filter).first();
+// Find the user in the database by username
+        Document userDoc = users.find(Filters.eq("username", username)).first();
 
         // Check if the user exists
-        if (userDocument != null) {
-            // Delete the user from the database
-            users.deleteOne(filter);
+        if (userDoc != null) {
+            // User found, delete the user
+            users.deleteOne(Filters.eq("username", username));
+            return true; // Deletion successful
         } else {
-            // User not found in the database, show error message
-            JOptionPane.showMessageDialog(null, "Error: User was not found.", "User Not Found", JOptionPane.ERROR_MESSAGE);
+            // User not found, return false indicating deletion failure
+            return false;
         }
-
-    }
-*/
-
-}}
+    }}
