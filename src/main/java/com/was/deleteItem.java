@@ -15,7 +15,7 @@ public class deleteItem extends JFrame {
 
     public deleteItem() {
 
-        this.setTitle("Add user Frame");
+        this.setTitle("Delete Item Frame");
         this.setSize(400,350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);

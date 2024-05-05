@@ -17,7 +17,7 @@ public class addItemPanel extends JFrame{
 
     public addItemPanel() {
 
-        this.setTitle("Add user Frame");
+        this.setTitle("Add Item Frame");
         this.setSize(400,350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);

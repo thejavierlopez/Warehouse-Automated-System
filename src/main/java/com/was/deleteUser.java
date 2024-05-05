@@ -18,7 +18,7 @@ public class deleteUser extends JFrame {
 
     public deleteUser() {
 
-        this.setTitle("Add user Frame");
+        this.setTitle("Delete user Frame");
         this.setSize(400,350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
