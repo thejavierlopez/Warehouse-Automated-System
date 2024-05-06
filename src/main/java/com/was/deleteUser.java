@@ -1,6 +1,4 @@
 package com.was;
-import com.mongodb.client.model.Filters;
-import org.bson.Document;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +10,8 @@ public class deleteUser extends JFrame {
     private JTextField textField2;
     private JLabel uName;
     private JButton goBackButton;
+    private JButton button3;
+    private JTextField DELETEALLUSERSTextField;
 
     // Create an instance of MongoUserDAO to access its methods
     private MongoUserDAO userDAO = new MongoUserDAO();
@@ -19,7 +19,7 @@ public class deleteUser extends JFrame {
     public deleteUser() {
 
         this.setTitle("Delete user Frame");
-        this.setSize(400,350);
+        this.setSize(550,350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
         this.setContentPane(delUMain);
