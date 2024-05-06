@@ -12,15 +12,17 @@ public class ItemService {
         itemDAO.addItem(item);
     }
 
-    public void deleteItem(Item item) {
-        itemDAO.deleteItem(item);
+    public void deleteItem(String itemName, int quantity) {
+        itemDAO.deleteItem(itemName, quantity);
     }
 
     public void updateItem(Item item) {
         itemDAO.updateItem(item);
     }
 
-    public void deleteAllItems() {itemDAO.deleteAllItems();}
+    public void deleteAllItems() {
+        itemDAO.deleteAllItems();
+    }
 
     //continue adding service methods
 }

@@ -4,6 +4,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
 import org.bson.Document;
 
 import com.mongodb.client.MongoClient;
@@ -35,22 +36,21 @@ public class MongoItemDAO implements ItemDAO {
     }
 
     @Override
+    public void deleteItem(String itemName, int quantity) {
+        MongoCollection<Document> collection = database.getCollection("items");
 
-    public void deleteItem(Item itemId) {
-
-        // Find the item in the database based on the provided item ID
-        Document itemDocument = items.find(Filters.eq("item_id", itemId)).first();
-
-        // Check if the item exists
-        if (itemDocument != null) {
-            // Delete the item from the database
-            items.deleteOne(itemDocument);
-            //JOptionPane.showMessageDialog(null, "Success: Item deleted from database", "Success Prompt", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            // If item is not found, show error message
-            //JOptionPane.showMessageDialog(null, "Error: Item not found.", "Item Not Found", JOptionPane.ERROR_MESSAGE);
+        //find item by name
+        Document item = collection.find(Filters.eq("name", itemName)).first();
+        if (item != null) {
+            int currentQuantity = item.getInteger("quantity");
+            if (quantity >= currentQuantity) {
+                //item is deleted if quantity to be deleted exceeds item quantity
+                collection.deleteOne(Filters.eq("name", itemName));
+            } else {
+                //delete specified item quantity
+                collection.updateOne(Filters.eq("name", itemName), Updates.inc("quantity", -quantity));
+            }
         }
-
     }
 
     @Override
