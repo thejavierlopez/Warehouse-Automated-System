@@ -54,6 +54,14 @@ public class deleteUser extends JFrame {
                 ex.setVisible(true);
             }
         });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                ConfirmDel ex = new ConfirmDel();
+                ex.setVisible(true);
+            }
+        });
     }
 
     public static void main(String[] args) {
