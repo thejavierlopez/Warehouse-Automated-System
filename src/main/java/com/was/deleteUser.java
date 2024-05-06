@@ -11,7 +11,6 @@ public class deleteUser extends JFrame {
     private JLabel uName;
     private JButton goBackButton;
     private JButton button3;
-    private JTextField DELETEALLUSERSTextField;
 
     // Create an instance of MongoUserDAO to access its methods
     private MongoUserDAO userDAO = new MongoUserDAO();

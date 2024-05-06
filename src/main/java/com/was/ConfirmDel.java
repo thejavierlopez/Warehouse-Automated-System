@@ -14,12 +14,12 @@ public class ConfirmDel extends JFrame {
     public ConfirmDel() {
 
 
-<<<<<<< Updated upstream
+
         this.setTitle("W.A.S");
-        
-======
+
+
         this.setSize(600, 350);
->>>>>>> Stashed changes
+
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);
         this.setContentPane(MainPan);
