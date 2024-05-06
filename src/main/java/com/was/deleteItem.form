@@ -83,7 +83,7 @@
         <properties>
           <font size="20" style="1"/>
           <foreground color="-16777216"/>
-          <text value="Remove Item Panel"/>
+          <text value="Remove Item "/>
         </properties>
       </component>
       <component id="7b733" class="javax.swing.JTextField" binding="textField1" default-binding="true">

@@ -14,7 +14,7 @@ public class ConfirmDel extends JFrame {
     public ConfirmDel() {
 
 
-        this.setTitle("Confirm DELETE Frame");
+        this.setTitle("W.A.S");
         this.setSize(400, 350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);

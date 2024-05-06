@@ -43,7 +43,7 @@ public class NonAdminCheckItemStockFrame extends JFrame {
     private MongoItemDAO mongoItemDAO; // Instance of MongoItemDAO
     public NonAdminCheckItemStockFrame() {
         // setting up the properties of the Frame
-        this.setTitle("Search Item Stock");
+        this.setTitle("W.A.S");
         this.setSize(850,225);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(3);

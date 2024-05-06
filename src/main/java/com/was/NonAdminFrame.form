@@ -52,7 +52,7 @@
                 </constraints>
                 <properties>
                   <font size="26" style="1"/>
-                  <text value="Services Control Panel"/>
+                  <text value="Services Control "/>
                 </properties>
               </component>
             </children>

@@ -64,7 +64,7 @@
                 </constraints>
                 <properties>
                   <font size="26" style="1"/>
-                  <text value="User Control Panel"/>
+                  <text value="User Control "/>
                 </properties>
               </component>
               <component id="56fc7" class="javax.swing.JButton" binding="deleteUserButton" default-binding="true">
@@ -112,7 +112,7 @@
                 </constraints>
                 <properties>
                   <font size="26" style="1"/>
-                  <text value="Services Control Panel"/>
+                  <text value="Services Control "/>
                 </properties>
               </component>
               <component id="6f9b4" class="javax.swing.JButton" binding="listAllItemsButton" default-binding="true">
@@ -160,7 +160,7 @@
                 </constraints>
                 <properties>
                   <font size="26" style="1"/>
-                  <text value="Item Control Panel"/>
+                  <text value="Item Control "/>
                 </properties>
               </component>
               <component id="b2551" class="javax.swing.JButton" binding="AddItemButton">

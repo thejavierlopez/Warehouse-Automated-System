@@ -21,7 +21,7 @@ public class LoginFrame extends JFrame {
     // Constructor for the Login Page
     public LoginFrame() {
         //Set the Frame to have these properties
-        this.setTitle("Login Page");
+        this.setTitle("W.A.S Login Page");
         this.setContentPane(LoginPanel);
         this.setSize(450, 515);
         this.setLocationRelativeTo(null); // center the frame

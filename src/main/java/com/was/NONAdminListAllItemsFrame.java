@@ -27,7 +27,7 @@ public class NONAdminListAllItemsFrame extends JFrame {
     public NONAdminListAllItemsFrame() {
 
         // setting up the properties of the Frame
-        this.setTitle("All Items in Database");
+        this.setTitle("W.A.S");
         this.setSize(800,380);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(3);

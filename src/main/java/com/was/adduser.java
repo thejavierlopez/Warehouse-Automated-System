@@ -17,7 +17,7 @@ public class adduser extends JFrame{
 
     public adduser() {
 
-        this.setTitle("Add user Frame");
+        this.setTitle("W.A.S");
         this.setSize(400,350);
         this.setDefaultCloseOperation(3);
         this.setLocationRelativeTo(null);

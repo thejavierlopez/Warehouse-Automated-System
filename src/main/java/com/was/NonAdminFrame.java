@@ -22,7 +22,7 @@ public class NonAdminFrame extends JFrame {
     public NonAdminFrame() {
 
         // set the properties of the Non-Admin Frame
-        setTitle("NonAdmin Frame");
+        setTitle("W.A.S");
         setContentPane(NonAdminPanel);
         setSize(600, 700);
         setDefaultCloseOperation(3);
