@@ -4,6 +4,8 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.FindOneAndUpdateOptions;
+import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.Updates;
 import org.bson.Document;
 
@@ -23,7 +25,9 @@ public class MongoItemDAO implements ItemDAO {
 
     @Override
     public void addItem(Item item) {
-        String itemId = UUID.randomUUID().toString();  // Generate a unique UUID for each item
+        //randomly generated item id
+        //String itemId = UUID.randomUUID().toString();
+        String itemId = generateItemId(item.getItemName());
         item.setItemId(itemId);  // Set the item ID in the Item object
 
         Document newItem = new Document("item_id", itemId)
@@ -31,6 +35,25 @@ public class MongoItemDAO implements ItemDAO {
                 .append("quantity", item.getItemQuantity());
         items.insertOne(newItem);
     }
+
+
+    private String generateItemId(String itemName) {
+        MongoCollection<Document> counters = database.getCollection("counters");
+        //this will allow easier to keep track of id numbers using the starting letter
+        //of the item name followed by six zeros
+        String key = itemName.substring(0, 1).toUpperCase();
+
+        // increment sequence for item id
+        Document counter = counters.findOneAndUpdate(
+                Filters.eq("item_id", key),
+                Updates.inc("seq", 1),
+                new FindOneAndUpdateOptions().upsert(true).returnDocument(ReturnDocument.AFTER)
+        );
+
+        int seq = counter != null ? counter.getInteger("seq", 1) : 1;  // Start from 1 if null
+        return key + String.format("%07d", seq);
+    }
+
 
     public FindIterable<Document> getAllItems() {
         return items.find();

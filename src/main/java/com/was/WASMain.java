@@ -26,11 +26,11 @@ public class WASMain {
 
         // Test Runs For Guis:
 //
-        //LoginFrame ex = new LoginFrame();
-        //ex.setVisible(true);
-
-        AdminFrame ex = new AdminFrame();
+        LoginFrame ex = new LoginFrame();
         ex.setVisible(true);
+
+        //AdminFrame ex = new AdminFrame();
+        //ex.setVisible(true);
 
 //        addItemPanel ex = new addItemPanel ();
 //        ex.setVisible(true);
