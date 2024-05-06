@@ -3,13 +3,17 @@ public class WASMain {
 
     public static void main(String[] args) {
 
-        //Creating the DAO implementations
+        /**
+         * original tests with data base
+         */
+
+//        Creating the DAO implementations
 //        UserDAO userDAO = new MongoUserDAO();
 //        ItemDAO itemDAO = new MongoItemDAO();
-////
-////        // Creating the service instances
+//
+//        // Creating the service instances
 //        UserService userService = new UserService(userDAO);
-//        ItemService itemService = new ItemService(itemDAO);
+        //ItemService itemService = new ItemService(itemDAO);
 //
 //        // Create a new User and add it using UserService
 //        User newUser = new User("Omero", "superSecurePassword", "NotAdmin");
@@ -17,20 +21,30 @@ public class WASMain {
 //        System.out.println("User added successfully.\n");
 //        System.out.println(newUser);
 //
-//        // Create a new Item and add it using ItemService
+        // Create a new Item and add it using ItemService
 //        Item newItem = new Item("SuperLongItemSuperLongItem Super Item", 1250); // Assuming Item constructor takes name and quantity, ID is
-//        // generated
+//        generated
 //        itemService.addItem(newItem);
 //        System.out.println("Item added successfully.\n");
-//
 
-        // Test Runs For Guis:
-//
+        /**
+         * delete all items test
+         */
+//        ItemDAO itemDAO = new MongoItemDAO();
+//        ItemService itemService = new ItemService(itemDAO);
+//        itemService.deleteAllItems();
+//        System.out.println("All Items deleted successfully.\n");
+
+
+        /**
+         * test GUI functionality
+         */
+
 //        LoginFrame ex = new LoginFrame();
 //        ex.setVisible(true);
 
-        AdminFrame ex = new AdminFrame();
-        ex.setVisible(true);
+//        AdminFrame ex = new AdminFrame();
+//        ex.setVisible(true);
 
 //        addItemPanel ex = new addItemPanel ();
 //        ex.setVisible(true);

@@ -89,10 +89,10 @@ public class MongoItemDAO implements ItemDAO {
         collection.deleteMany(new Document());
     }
 
-    @Override
-    public void updateItem(Item item) {
-
-    }
+//    @Override
+//    public void updateItem(Item item) {
+//
+//    }
     //continue adding additional methods here
 
 }

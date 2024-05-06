@@ -20,6 +20,9 @@ public class MongoUserDAO implements UserDAO {
         int userId = getNextUserId();  // Ensure this method is called to fetch the next user ID
         user.setUserId(userId);  // Set the user ID in the User object
 
+
+        //attempted to add hashing to encrypt user passwords
+        //was unable to get them working and left in plain text instead
         //String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         Document newUser = new Document("user_id", userId)
                 .append("username", user.getUserName())
@@ -92,16 +95,10 @@ public class MongoUserDAO implements UserDAO {
     }
 
 
-
-    @Override
-    public void updateUser(User user) {
-        // Implementation here...
-    }
-
     @Override
     public boolean deleteUser(String username) {
 
-// Find the user in the database by username
+        //find the user in the database by username
         Document userDoc = users.find(Filters.eq("username", username)).first();
 
         // Check if the user exists
@@ -119,7 +116,7 @@ public class MongoUserDAO implements UserDAO {
     public void deleteAllRegularUsers() {
         MongoCollection<Document> users = database.getCollection("users");
         //delete users with "user" role assigned to them
-        users.deleteMany(Filters.eq("role", "user"));
+        users.deleteMany(Filters.in("role", "user", "NotAdmin"));
     }
 
     //continue adding here

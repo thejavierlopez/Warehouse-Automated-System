@@ -23,7 +23,9 @@ public class User {
 
     */
 
-    //getters
+    /**
+     * Getters
+     */
     public int getUserId() {
         return userId;
     }
@@ -40,7 +42,9 @@ public class User {
         return role;
     }
 
-    //setters
+    /**
+     * Setters
+     */
     public void setUserId(int userId) {
         this.userId = userId;
     }

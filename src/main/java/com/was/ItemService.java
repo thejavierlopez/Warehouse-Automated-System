@@ -16,9 +16,9 @@ public class ItemService {
         itemDAO.deleteItem(itemName, quantity);
     }
 
-    public void updateItem(Item item) {
-        itemDAO.updateItem(item);
-    }
+//    //public void updateItem(Item item) {
+//        itemDAO.updateItem(item);
+//    }
 
     public void deleteAllItems() {
         itemDAO.deleteAllItems();

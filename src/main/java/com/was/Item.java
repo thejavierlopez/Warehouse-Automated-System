@@ -13,7 +13,9 @@ public class Item {
         this.itemQuantity = itemQuantity;
     }
 
-    //getters
+    /**
+     *Getters
+     */
     public String getItemId() {
         return itemId;
     }
@@ -26,7 +28,9 @@ public class Item {
         return itemQuantity;
     }
 
-    //setters
+    /**
+     *Setters
+     */
 
     public void setItemId(String itemId) {
         this.itemId = itemId;

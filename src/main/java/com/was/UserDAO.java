@@ -5,7 +5,7 @@ public interface UserDAO {
 
     User getUser(String id);
 
-    void updateUser(User user);
+//  void updateUser(User user);
     boolean deleteUser(String id);
     void deleteAllRegularUsers();
 
