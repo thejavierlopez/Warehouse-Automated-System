@@ -12,6 +12,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 
+import javax.swing.*;
 import java.util.UUID;
 
 public class MongoItemDAO implements ItemDAO {
@@ -41,14 +42,19 @@ public class MongoItemDAO implements ItemDAO {
 
         //find item by name
         Document item = collection.find(Filters.eq("name", itemName)).first();
+        if (item == null) {
+            JOptionPane.showMessageDialog(null, "Error: Item Not Found!");
+        }
         if (item != null) {
             int currentQuantity = item.getInteger("quantity");
             if (quantity >= currentQuantity) {
                 //item is deleted if quantity to be deleted exceeds item quantity
                 collection.deleteOne(Filters.eq("name", itemName));
+                JOptionPane.showMessageDialog(null, "Error: Make Sure The Quantity Removed DOES NOT Exceed Stock!");
             } else {
                 //delete specified item quantity
                 collection.updateOne(Filters.eq("name", itemName), Updates.inc("quantity", -quantity));
+                JOptionPane.showMessageDialog(null, "Items Removed successfully!");
             }
         }
     }

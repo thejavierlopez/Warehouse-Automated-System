@@ -25,6 +25,19 @@ public class deleteItem extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                //Implement deleteItem method here
+                // Retrieve item name and quantity from text fields
+                String itemName = textField1.getText();
+                int quantity = Integer.parseInt(textField2.getText());
+
+                // Call the deleteItem method from MongoItemDAO
+                MongoItemDAO itemDAO = new MongoItemDAO();
+                itemDAO.deleteItem(itemName, quantity);
+
+                // Clear text fields after deletion
+                textField1.setText("");
+                textField2.setText("");
+
 
             }
 
