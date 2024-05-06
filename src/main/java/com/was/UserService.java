@@ -1,4 +1,7 @@
 package com.was;
+
+import java.util.List;
+
 public class UserService {
     private final UserDAO userDAO;
 
@@ -24,6 +27,10 @@ public class UserService {
     }
     public void updateUser(User user) {
         userDAO.updateUser(user);
+    }
+
+    public void deleteAllRegularUsers() {
+        userDAO.deleteAllRegularUsers();
     }
 
 

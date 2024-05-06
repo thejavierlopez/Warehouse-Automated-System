@@ -113,4 +113,15 @@ public class MongoUserDAO implements UserDAO {
             // User not found, return false indicating deletion failure
             return false;
         }
-    }}
+    }
+
+    @Override
+    public void deleteAllRegularUsers() {
+        MongoCollection<Document> users = database.getCollection("users");
+        //delete users with "user" role assigned to them
+        users.deleteMany(Filters.eq("role", "user"));
+    }
+
+    //continue adding here
+
+}
